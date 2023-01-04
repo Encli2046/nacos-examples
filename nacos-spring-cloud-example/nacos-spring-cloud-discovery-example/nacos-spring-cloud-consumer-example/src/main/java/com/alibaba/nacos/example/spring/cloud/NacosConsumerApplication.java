@@ -35,7 +35,9 @@ public class NacosConsumerApplication {
         private final RestTemplate restTemplate;
 
         @Autowired
-        public TestController(RestTemplate restTemplate) {this.restTemplate = restTemplate;}
+        public TestController(RestTemplate restTemplate) {
+            this.restTemplate = restTemplate;
+        }
 
         @RequestMapping(value = "/echo/{str}", method = RequestMethod.GET)
         public String echo(@PathVariable String str) {
